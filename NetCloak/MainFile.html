@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<style>
+    #execute-button {
+        background-color: #224961;
+        padding: 5px;
+        color: #fff;
+        border-style: none;
+    }
+    .button-container,
+    .input-spacer {
+        margin: 20px 0;
+    }
+    .title {
+      margin: 20px 0;
+      font-size: 24px;
+      font-weight: bolder:
+    }
+</style>
+<script>
+    function offerLuck() {
+        alert('Here, take this luck!');
+    }
+</script>
+
+<body>
+    <div class="body-formatting">
+        <div class="title-identifier">Hello, <b id="name-identifier">Jeremy Smith</b></div>
+        <div class="title">Profile Page</div>
+        <form>
+          <div class="input-spacer">
+              <input type="text" name="firstname" placeholder="First Name"><br>
+              <input type="text" name="lastname" placeholder="Last Name"><br>
+          </div>
+
+          <div class="input-spacer">
+              <input type="radio" name="gender" value="male">Male<br>
+              <input type="radio" name="gender" value="female">Female<br>
+              <input type="radio" name="gender" value="optional">Prefer not to say<br><br>
+          </div>
+
+          <div class="input-spacer">
+              <input type="checkbox" name="interests" value="seafood">I like seafood<br>
+              <input type="checkbox" name="interests" value="meat">I like meat<br>
+              <input type="checkbox" name="interests" value="veggies">I like veggies<br><br>
+          </div>
+
+          <div class="input-spacer">
+              <input type="submit" value="Submit">
+          </div>
+        </form>
+    </div>
+    <div class="button-container">
+        <button id="execute-button" onclick="offerLuck()">Click Me for Good Luck</button>
+    </div>
+</body>
+<html>
