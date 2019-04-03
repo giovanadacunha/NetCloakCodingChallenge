@@ -52,19 +52,25 @@
     </div>
     <script>
  	function offerLuck(){
- 		var x = document.getElementsByName("interests")
+ 		var x = document.getElementsByName("interests");
  		for(i = 0; i<x.length; i++){
  			if(x[i].value == "veggies" || x[i].value == "seafood"){
  				x[i].checked = true;
  			}
  		}
  		
- 		var y = document.getElementsByName("gender")
+ 		var y = document.getElementsByName("gender");
  		for(i = 0; i<y.length; i++){
  			if(y[i].value == "optional"){
  				y[i].checked = true;
  			}
  		}
+ 		
+ 		var str = document.getElementById("name-identifier").innerText;
+ 		var sep = str.toString().split(' ');
+ 		document.getElementsByName("firstname")[0].placeholder = sep[0];
+ 		document.getElementsByName("lastname")[0].placeholder = sep[1];
+ 		
  		
  	}
     </script>
