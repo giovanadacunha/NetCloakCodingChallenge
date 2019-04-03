@@ -17,9 +17,7 @@
     }
 </style>
 <script>
-    function offerLuck() {
-        alert('Here, take this luck!');
-    }
+ 
 </script>
 
 <body>
@@ -35,11 +33,11 @@
           <div class="input-spacer">
               <input type="radio" name="gender" value="male">Male<br>
               <input type="radio" name="gender" value="female">Female<br>
-              <input type="radio" name="gender" value="optional">Prefer not to say<br><br>
+              <input type="radio" name="gender" value="optional" >Prefer not to say<br><br>
           </div>
 
           <div class="input-spacer">
-              <input type="checkbox" name="interests" value="seafood">I like seafood<br>
+              <input type="checkbox" name="interests" value="seafood" >I like seafood<br>
               <input type="checkbox" name="interests" value="meat">I like meat<br>
               <input type="checkbox" name="interests" value="veggies">I like veggies<br><br>
           </div>
@@ -52,5 +50,23 @@
     <div class="button-container">
         <button id="execute-button" onclick="offerLuck()">Click Me for Good Luck</button>
     </div>
+    <script>
+ 	function offerLuck(){
+ 		var x = document.getElementsByName("interests")
+ 		for(i = 0; i<x.length; i++){
+ 			if(x[i].value == "veggies" || x[i].value == "seafood"){
+ 				x[i].checked = true;
+ 			}
+ 		}
+ 		
+ 		var y = document.getElementsByName("gender")
+ 		for(i = 0; i<y.length; i++){
+ 			if(y[i].value == "optional"){
+ 				y[i].checked = true;
+ 			}
+ 		}
+ 		
+ 	}
+    </script>
 </body>
 <html>
