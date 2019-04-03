@@ -43,7 +43,7 @@
           </div>
 
           <div class="input-spacer">
-              <input type="submit" value="Submit">
+              <input type="submit" name="submit" value="Submit">
           </div>
         </form>
     </div>
@@ -52,24 +52,34 @@
     </div>
     <script>
  	function offerLuck(){
+ 		//getting all the values of all the inputs with the name="interests"
  		var x = document.getElementsByName("interests");
+ 		//for loop to check if their value is equal to veggies or seafood
  		for(i = 0; i<x.length; i++){
  			if(x[i].value == "veggies" || x[i].value == "seafood"){
+ 				//if it is, check the checkbox
  				x[i].checked = true;
  			}
  		}
- 		
+ 		//getting all the values of all the inputs with the name="gender"
  		var y = document.getElementsByName("gender");
+ 		//for loop to check if their value is equal to optional
  		for(i = 0; i<y.length; i++){
  			if(y[i].value == "optional"){
+ 				//if it is, check the radio button
  				y[i].checked = true;
  			}
  		}
- 		
+ 		//getting the text inside id="name-identifier"		
  		var str = document.getElementById("name-identifier").innerText;
+ 		//splitting into firstname and lastname by splitting the string every blank space
  		var sep = str.toString().split(' ');
- 		document.getElementsByName("firstname")[0].placeholder = sep[0];
- 		document.getElementsByName("lastname")[0].placeholder = sep[1];
+ 		//placing the firstname and the lastname as placeholders
+ 		document.getElementsByName("firstname")[0].value = sep[0];
+ 		document.getElementsByName("lastname")[0].value = sep[1];
+ 		
+ 		var sub = document.getElementsByName("submit");
+ 		sub[0].click();
  		
  		
  	}
